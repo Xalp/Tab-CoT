@@ -1,0 +1,4 @@
+openai==0.25.0
+torch==1.13.1
+pandas==1.5.2
+torchtext==0.14.1

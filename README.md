@@ -21,6 +21,10 @@ pip install -r requirements.txt
 
 To use our code, you must have your own OpenAI API from: https://beta.openai.com/account/api-keys, and set it as environment variable "OPENAI_API_KEY". (You can also change util.py:61 to directly edit the API)
 
+```
+export OPENAI_API_KEY=(YOUR OPENAI API KEY)
+```
+
 Noted that CodeX API is not open to public usage as of May, 2023. However, our code can still work with the recent GPT-3.5;
 
 Here is an example script to run our method on SingleEq dataset under Zero-shot setting:

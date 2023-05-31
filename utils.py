@@ -100,7 +100,7 @@ def decoder_for_gpt3(args, input, max_length, i, k):
 
                     ]
                 )
-                response = response["choices"][0]["message"]["content"]
+                return response["choices"][0]["message"]["content"]
         except KeyboardInterrupt:
             print('Interrupted')
             try:

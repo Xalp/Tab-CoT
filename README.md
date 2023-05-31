@@ -14,6 +14,12 @@ We have setup a demo on HuggingFace. Feel free to play around with it.
 
 https://huggingface.co/spaces/Xalphinions/tab-cot
 
+However, you can also setup your own gradio demo:
+
+```
+python app_gradio.py
+```
+
 ## Installation
 
 Setup the environment from requirements.txt: 

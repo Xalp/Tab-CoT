@@ -31,20 +31,22 @@ export OPENAI_API_KEY=(YOUR OPENAI API KEY)
 
 Noted that CodeX API is not open to public usage as of May, 2023. However, our code can still work with the recent GPT-3.5;
 
-Here is an example script to run our method on SingleEq dataset under Zero-shot setting:
+### Zero-shot
 ```
 python main.py --model=gpt3-xl --dataset=singleeq --limit_dataset_size 0 --model=chatgpt --method=zero_shot_cot
 ```
 
-Here is an example script to run our method on SingleEq dataset under Zero-shot setting with self-consistency:
+### Zero-shot with self-consistency:
 ```
 python main.py --model=gpt3-xl --dataset=singleeq --limit_dataset_size 0 --model=chatgpt --method=zero_shot_cot --self_consistency
 ```
 
-Here is an example script to run our method on SingleEq dataset under few-shot setting with self-consistency:
+### Few-shot:
 ```
 python main.py --model=gpt3-xl --dataset=singleeq --limit_dataset_size 0 --model=chatgpt --method=few_shot_cot
 ```
+
+You can replace "singleeq" to any other datasets we included: "aqua", "gsm8k", "commonsensqa", "addsub", "multiarith",  "strategyqa", "svamp", "singleeq", "coin_flip", "last_letters"
 
 ## Citation
 

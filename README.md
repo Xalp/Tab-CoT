@@ -33,3 +33,15 @@ python main.py --model=gpt3-xl --dataset=singleeq --limit_dataset_size 0 --model
 ```
 
 ## Citation
+
+To cite our paper, please include the following bibtex:
+
+```
+@misc{jin2023tabcot,
+      title={Tab-CoT: Zero-shot Tabular Chain of Thought}, 
+      author={Ziqi Jin and Wei Lu},
+      year={2023},
+      booktitle = {Findings of ACL},
+      url={[cs.CL](https://arxiv.org/abs/2305.17812)}
+}
+```

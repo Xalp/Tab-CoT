@@ -4,6 +4,10 @@ This is the official implementation of `Tab-CoT: Zero-shot Tabular Chain of Thou
 
 The paper is available at https://arxiv.org/abs/2305.17812.
 
+<div align="center">
+<img src="intro.jpg">
+</div>
+
 ## Demo
 
 We have setup a demo on HuggingFace. Feel free to play around with it. 

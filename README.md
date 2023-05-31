@@ -1,6 +1,6 @@
 # Tab-CoT: Zero-shot Tabular Chain of Thought
 
-This is the official implementation of `Tab-CoT: Zero-shot Tabular Chain of Thought` (Accepted at Finding of ACL 2023).
+This is the official implementation of `Tab-CoT: Zero-shot Tabular Chain of Thought` (Accepted at Findings of ACL 2023).
 
 The paper is available at https://arxiv.org/abs/2305.17812.
 

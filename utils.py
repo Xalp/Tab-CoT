@@ -58,7 +58,7 @@ def decoder_for_gpt3(args, input, max_length, i, k):
     
     # https://beta.openai.com/account/api-keys
 
-    openai.api_key = #put your api here
+    openai.api_key = os.getenv("OPENAI_API_KEY")#put your api here
     # print(openai.api_key)
     
     # Specify engine ...
@@ -75,19 +75,32 @@ def decoder_for_gpt3(args, input, max_length, i, k):
         engine = "code-cushman-001"
     elif args.model == "code-xl": # Please change this back
         engine = "code-davinci-002"
+    elif args.model == "chatgpt":
+        engine = "gpt-3.5-turbo"
     else:
         raise ValueError("model is not properly defined ...")
     cnt = 0
     while True:
         try:
-            response = openai.Completion.create(
-            engine=engine,
-            prompt=input,
-            max_tokens=max_length,
-            temperature=0,
-            stop='\n\n'
-            )
-            return response["choices"][0]["text"]
+            if args.model != "chatgpt":
+                response = openai.Completion.create(
+                engine=engine,
+                prompt=input,
+                max_tokens=max_length,
+                temperature=0,
+                stop='\n\n'
+                )
+                return response["choices"][0]["text"]
+            else:
+                response = openai.ChatCompletion.create(
+                model="gpt-3.5-turbo",
+                messages=[
+                        {"role": "system", "content": "You are a helpful assistant that generate table to solve reasoning problem."},
+                        {"role": "user", "content": input},
+
+                    ]
+                )
+                response = response["choices"][0]["message"]["content"]
         except KeyboardInterrupt:
             print('Interrupted')
             try:

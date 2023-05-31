@@ -8,7 +8,7 @@ The paper is available at https://arxiv.org/abs/2305.17812.
 <img src="intro.jpg">
 </div>
 
-## Demo
+## [NEW!!] Gradio Demo
 
 We have setup a demo on HuggingFace. Feel free to play around with it. 
 
